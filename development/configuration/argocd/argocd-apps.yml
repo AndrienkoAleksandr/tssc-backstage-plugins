@@ -7,7 +7,7 @@ metadata:
   namespace: argocd
   annotations:
       # 1. Map to Backstage entity (REQUIRED)
-    backstage.io/entity-ref: 'component:default/my-application'
+    backstage.io/entity-ref: 'component:default/guestbook-via-name-no-instance'
 
     # 2. Subscribe to notification triggers (add the ones you want)
     notifications.argoproj.io/subscribe.on-sync-succeeded-backstage.backstage: ''
@@ -39,7 +39,7 @@ metadata:
   namespace: argocd
   annotations:
       # 1. Map to Backstage entity (REQUIRED)
-    backstage.io/entity-ref: 'component:default/my-application'
+    backstage.io/entity-ref: 'component:default/basic-app-via-name'
 
     # 2. Subscribe to notification triggers (add the ones you want)
     notifications.argoproj.io/subscribe.on-sync-succeeded-backstage.backstage: ''
