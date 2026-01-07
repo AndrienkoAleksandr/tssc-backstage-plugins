@@ -5,6 +5,15 @@ metadata:
     app: backstage
   name: guestbook
   namespace: argocd
+  annotations:
+      # 1. Map to Backstage entity (REQUIRED)
+    backstage.io/entity-ref: 'component:default/my-application'
+
+    # 2. Subscribe to notification triggers (add the ones you want)
+    notifications.argoproj.io/subscribe.on-sync-succeeded-backstage.backstage: ''
+    notifications.argoproj.io/subscribe.on-sync-failed-backstage.backstage: ''
+    notifications.argoproj.io/subscribe.on-health-degraded-backstage.backstage: ''
+    notifications.argoproj.io/subscribe.on-deployed-backstage.backstage: ''
 spec:
   destination:
     namespace: demo-apps
@@ -28,6 +37,15 @@ metadata:
     app: backstage
   name: basic-app
   namespace: argocd
+  annotations:
+      # 1. Map to Backstage entity (REQUIRED)
+    backstage.io/entity-ref: 'component:default/my-application'
+
+    # 2. Subscribe to notification triggers (add the ones you want)
+    notifications.argoproj.io/subscribe.on-sync-succeeded-backstage.backstage: ''
+    notifications.argoproj.io/subscribe.on-sync-failed-backstage.backstage: ''
+    notifications.argoproj.io/subscribe.on-health-degraded-backstage.backstage: ''
+    notifications.argoproj.io/subscribe.on-deployed-backstage.backstage: ''
 spec:
   destination:
     namespace: demo-apps
